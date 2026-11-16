@@ -23,6 +23,17 @@ namespace TimeLord_Данилова
         public MainWindow()
         {
             InitializeComponent();
+            OpenPages(pages.stopwatch);
+
+        }
+        public enum pages
+        {
+            stopwatch // секундомер
+        }
+        public void OpenPages(pages _page)
+        {
+            if (_page == pages.stopwatch) // если открытая страницу является секундомером
+                frame.Navigate(new Pages.Stopwatch()); // открываем страницу секундомера
         }
     }
 }
